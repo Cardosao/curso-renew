@@ -8,8 +8,12 @@ import { HomePage } from '../pages/home/home';
 @Component({
   templateUrl: 'app.html'
 })
+
+
 export class MyApp {
-  rootPage = HomePage;
+
+  public home = HomePage;
+  public rootPage = this.home;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -19,4 +23,11 @@ export class MyApp {
       Splashscreen.hide();
     });
   }
+
+  public openPage(page) {
+    this.rootPage = page;
+  }
+
+
+
 }
