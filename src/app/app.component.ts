@@ -6,6 +6,7 @@ import { HomePage } from '../pages/home/home';
 import { TestePage } from '../pages/teste/teste';
 import { AlertPage } from '../pages/alert/alert';
 import { ButtonsPage } from '../pages/buttons/buttons';
+import { CardsPage } from '../pages/cards/cards';
 
 
 @Component({
@@ -15,12 +16,13 @@ import { ButtonsPage } from '../pages/buttons/buttons';
 
 export class MyApp {
 
-  public home = HomePage;
-  public teste = TestePage;
-  public alert = AlertPage;
-  public buttons = ButtonsPage;
+  public home:any = HomePage;
+  public teste:any = TestePage;
+  public alert:any = AlertPage;
+  public buttons:any = ButtonsPage;
+  public cards:any = CardsPage;
 
-  public rootPage = this.home;
+  public rootPage:any = this.home;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -31,7 +33,7 @@ export class MyApp {
     });
   }
 
-  public openPage(page) {
+  public openPage(page) : any {
     this.rootPage = page;
   }
 

@@ -1,0 +1,43 @@
+page-cards {
+  .ion-card {
+    position: relative;
+    text-align: right;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 69%;
+    right: 4%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 89%;
+    right: 4%;
+    width: 100%;
+    color: #fff;
+  }
+  .social-text {
+    font-size: 1.09rem;
+    //padding: 0 0.9em;
+  }
+  .near {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .near-left {
+    margin: 0 !important;
+    margin-left: 5% !important;
+    padding: 0 !important;
+  }
+  .near-right {
+    margin: 0 !important;
+    margin-right: 5% !important;
+    padding: 0 !important;
+  }
+}
