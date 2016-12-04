@@ -3,6 +3,8 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
+import { TestePage } from '../pages/teste/teste';
+import { AlertPage } from '../pages/alert/alert';
 
 
 @Component({
@@ -13,6 +15,8 @@ import { HomePage } from '../pages/home/home';
 export class MyApp {
 
   public home = HomePage;
+  public teste = TestePage;
+  public alert = AlertPage;
   public rootPage = this.home;
 
   constructor(platform: Platform) {
