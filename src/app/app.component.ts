@@ -5,6 +5,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 import { HomePage } from '../pages/home/home';
 import { TestePage } from '../pages/teste/teste';
 import { AlertPage } from '../pages/alert/alert';
+import { ButtonsPage } from '../pages/buttons/buttons';
 
 
 @Component({
@@ -17,6 +18,8 @@ export class MyApp {
   public home = HomePage;
   public teste = TestePage;
   public alert = AlertPage;
+  public buttons = ButtonsPage;
+
   public rootPage = this.home;
 
   constructor(platform: Platform) {
