@@ -7,6 +7,8 @@ import { TestePage } from '../pages/teste/teste';
 import { AlertPage } from '../pages/alert/alert';
 import { ButtonsPage } from '../pages/buttons/buttons';
 import { CardsPage } from '../pages/cards/cards';
+import { InputsPage } from '../pages/inputs/inputs';
+import { ListsPage } from '../pages/lists/lists';
 
 
 @Component({
@@ -21,6 +23,8 @@ export class MyApp {
   public alert:any = AlertPage;
   public buttons:any = ButtonsPage;
   public cards:any = CardsPage;
+  public inputs:any = InputsPage;
+  public lists:any = ListsPage;
 
   public rootPage:any = this.home;
 

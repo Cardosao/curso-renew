@@ -6,6 +6,8 @@ import { TestePage } from '../pages/teste/teste';
 import { AlertPage } from '../pages/alert/alert';
 import { ButtonsPage } from '../pages/buttons/buttons';
 import { CardsPage } from '../pages/cards/cards';
+import { InputsPage } from '../pages/inputs/inputs';
+import { ListsPage } from '../pages/lists/lists';
 /**
 * Se for utilizar algo especifico em uma pagina importa lá
 * caso seja algo que sera usado em varias carrega aqui no ngModule
@@ -25,6 +27,8 @@ import { Uppercase } from '../pipes/uppercase';
     AlertPage,
     ButtonsPage,
     CardsPage,
+    InputsPage,
+    ListsPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -37,6 +41,8 @@ import { Uppercase } from '../pipes/uppercase';
     AlertPage,
     ButtonsPage,
     CardsPage,
+    InputsPage,
+    ListsPage,
   ],
   providers: [{provide: ErrorHandler, useClass: IonicErrorHandler}]
 })
