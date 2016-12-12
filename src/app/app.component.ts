@@ -9,12 +9,12 @@ import { ButtonsPage } from '../pages/buttons/buttons';
 import { CardsPage } from '../pages/cards/cards';
 import { InputsPage } from '../pages/inputs/inputs';
 import { ListsPage } from '../pages/lists/lists';
-
+import { GridPage } from '../pages/grid/grid';
+import { ModalPage } from '../pages/modal/modal';
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: 'app.html',
 })
-
 
 export class MyApp {
 
@@ -25,6 +25,8 @@ export class MyApp {
   public cards:any = CardsPage;
   public inputs:any = InputsPage;
   public lists:any = ListsPage;
+  public grid:any = GridPage;
+  public modal:any = ModalPage;
 
   public rootPage:any = this.home;
 

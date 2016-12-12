@@ -13,7 +13,22 @@ import { NavController } from 'ionic-angular';
 })
 export class ListsPage {
 
-  constructor(public navCtrl: NavController) {}
+  public personagens: Array<string>;
+  public avatar: any = "../../assets/img/d3.jpg";
+
+  constructor(public navCtrl: NavController) {
+    this.personagens = [
+      'Monk',
+      'Barbarian',
+      'Wizard',
+      'Witch Doctor',
+      'Crusader',
+      'Demon Hunter',
+      'Necromancer'
+    ];
+
+
+  }
 
   ionViewDidLoad() {
     console.log('Hello ListsPage Page');

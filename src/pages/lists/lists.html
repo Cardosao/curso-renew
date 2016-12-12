@@ -9,9 +9,60 @@
 
 </ion-header>
 
-
 <ion-content padding>
 
-  
+  <ion-list>
+    <ion-item-group>
+      <ion-item-divider>D3</ion-item-divider>
+      <ion-item *ngFor="let p of personagens">
+        <ion-avatar item-left>
+          <img src={{avatar}}>
+        </ion-avatar>
+        <h2>{{p}}</h2>
+      </ion-item>
+    </ion-item-group>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      D3 - Blizzard
+    </ion-list-header>
+    <ion-item-sliding *ngFor="let ps of personagens">
+      <ion-item>
+        <ion-avatar item-left>
+          <img src={{avatar}}>
+        </ion-avatar>
+        <h2>{{ps}}</h2>
+      </ion-item>
+      <ion-item-options>
+        <button ion-button color="light" icon-left>
+          <ion-icon name="ios-more"></ion-icon>
+          More
+        </button>
+        <button ion-button color="primary" icon-left>
+          <ion-icon name="text"></ion-icon>
+          Text
+        </button>
+        <button ion-button color="secondary" icon-left>
+          <ion-icon name="call"></ion-icon>
+          Call
+        </button>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-item-divider>D3</ion-item-divider>
+    </ion-list-header>
+    <ion-item *ngFor="let psg of personagens">
+      <ion-thumbnail item-left>
+        <img src={{avatar}} alt="Diablo 3">
+      </ion-thumbnail>
+      <h2>{{ psg }}</h2>
+      <p>{{ psg }}</p>
+      <button ion-button clear item-right>View</button>
+    </ion-item>
+  </ion-list>
 
 </ion-content>

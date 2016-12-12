@@ -11,6 +11,12 @@
       <button ion-item (click)="openPage(home)" menuClose>
         Home
       </button>
+      <button ion-item (click)="openPage(modal)" menuClose>
+        Modal
+      </button>
+      <button ion-item (click)="openPage(grid)" menuClose>
+        Grid
+      </button>
       <button ion-item (click)="openPage(lists)" menuClose>
         Lists
       </button>
@@ -33,5 +39,6 @@
   </ion-content>
 
 </ion-menu>
+
 
 <ion-nav id="main-nav" [root]="rootPage" #content></ion-nav>

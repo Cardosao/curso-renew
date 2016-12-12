@@ -1,0 +1,3 @@
+interface Api {
+  (error: Error, data: any): void;
+}
