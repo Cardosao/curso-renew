@@ -27,8 +27,8 @@ export class ApiService {
   //   });
   // }
 
-  login() {
-    this.loginFn.login(new User());
+  login(user: User) {
+    this.loginFn.login(user);
   }
 
   logout() {

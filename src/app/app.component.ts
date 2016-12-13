@@ -11,6 +11,7 @@ import { InputsPage } from '../pages/inputs/inputs';
 import { ListsPage } from '../pages/lists/lists';
 import { GridPage } from '../pages/grid/grid';
 import { ModalPage } from '../pages/modal/modal';
+import { NavTestPage } from '../pages/nav-test/nav-test';
 
 @Component({
   templateUrl: 'app.html',
@@ -27,6 +28,7 @@ export class MyApp {
   public lists:any = ListsPage;
   public grid:any = GridPage;
   public modal:any = ModalPage;
+  public navPage:any = NavTestPage;
 
   public rootPage:any = this.home;
 

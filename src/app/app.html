@@ -11,6 +11,9 @@
       <button ion-item (click)="openPage(home)" menuClose>
         Home
       </button>
+      <button ion-item (click)="openPage(navPage)" menuClose>
+        Navigation
+      </button>
       <button ion-item (click)="openPage(modal)" menuClose>
         Modal
       </button>
@@ -41,4 +44,4 @@
 </ion-menu>
 
 
-<ion-nav id="main-nav" [root]="rootPage" #content></ion-nav>
+<ion-nav id="main-nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

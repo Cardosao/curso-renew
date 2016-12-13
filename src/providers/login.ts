@@ -27,8 +27,8 @@ export class Login {
     this.headers = new Headers();
   }
 
-  public login(user:User) {
-
+  public login(user: User) {
+    console.info("NO LOGIN: " + JSON.stringify(user));
     let responseServer = new Promise((resolve, reject) => {
       let body = JSON.stringify(user);
 
@@ -88,7 +88,7 @@ export class Login {
 
   }
 
-  logout() {
+  public logout() {
     localStorage.removeItem('token');
     localStorage.removeItem('X-Authorization');
 

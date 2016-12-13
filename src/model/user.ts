@@ -5,8 +5,8 @@ export class User {
 
   constructor(){}
 
-  private email:string = "fabiano@cardosao.com";
-  private password:string = "123";
+  private email:string = "";
+  private password:string = "";
 
   public setEmail(email:string) {
     return this.email = email;
