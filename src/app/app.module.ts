@@ -18,6 +18,7 @@ import { GridPage } from '../pages/grid/grid';
 import { ModalPage } from '../pages/modal/modal';
 import { ModalLoginPage } from '../pages/modal-login/modal-login';
 import { NavTestPage } from '../pages/nav-test/nav-test';
+import { AbasPage } from '../pages/abas/abas';
 
 import { ApiService } from '../providers/api-service';
 import { Login } from '../providers/login';
@@ -49,6 +50,7 @@ import { Uppercase } from '../pipes/uppercase';
     ModalPage,
     ModalLoginPage,
     NavTestPage,
+    AbasPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -69,6 +71,7 @@ import { Uppercase } from '../pipes/uppercase';
     ModalPage,
     ModalLoginPage,
     NavTestPage,
+    AbasPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

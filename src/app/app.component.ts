@@ -12,6 +12,7 @@ import { ListsPage } from '../pages/lists/lists';
 import { GridPage } from '../pages/grid/grid';
 import { ModalPage } from '../pages/modal/modal';
 import { NavTestPage } from '../pages/nav-test/nav-test';
+import { AbasPage } from '../pages/abas/abas';
 
 @Component({
   templateUrl: 'app.html',
@@ -29,6 +30,8 @@ export class MyApp {
   public grid:any = GridPage;
   public modal:any = ModalPage;
   public navPage:any = NavTestPage;
+  public abas: any = AbasPage;
+
 
   public rootPage:any = this.home;
 

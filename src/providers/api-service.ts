@@ -70,7 +70,7 @@ export class ApiService {
         },
 
         list: function() {
-          return new Promise(http.list(url + '/rest/fornecedor/'))
+          return new Promise(http.list(url + '/rest/fornecedor/'));
         },
         get: function(id) {
           return new Promise(resolve => { http.get(url + '/rest/fornecedor/' + id) });
