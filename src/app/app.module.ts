@@ -19,6 +19,10 @@ import { ModalPage } from '../pages/modal/modal';
 import { ModalLoginPage } from '../pages/modal-login/modal-login';
 import { NavTestPage } from '../pages/nav-test/nav-test';
 import { AbasPage } from '../pages/abas/abas';
+import { InicioPage } from '../pages/inicio/inicio';
+import { ContatosPage } from '../pages/contatos/contatos';
+import { ToastPage } from '../pages/toast/toast';
+import { ToolbarPage } from '../pages/toolbar/toolbar';
 
 import { ApiService } from '../providers/api-service';
 import { Login } from '../providers/login';
@@ -51,6 +55,10 @@ import { Uppercase } from '../pipes/uppercase';
     ModalLoginPage,
     NavTestPage,
     AbasPage,
+    InicioPage,
+    ContatosPage,
+    ToastPage,
+    ToolbarPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -72,6 +80,10 @@ import { Uppercase } from '../pipes/uppercase';
     ModalLoginPage,
     NavTestPage,
     AbasPage,
+    InicioPage,
+    ContatosPage,
+    ToastPage,
+    ToolbarPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

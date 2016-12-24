@@ -13,6 +13,8 @@ import { GridPage } from '../pages/grid/grid';
 import { ModalPage } from '../pages/modal/modal';
 import { NavTestPage } from '../pages/nav-test/nav-test';
 import { AbasPage } from '../pages/abas/abas';
+import { ToastPage } from '../pages/toast/toast'
+import { ToolbarPage } from '../pages/toolbar/toolbar';
 
 @Component({
   templateUrl: 'app.html',
@@ -31,6 +33,8 @@ export class MyApp {
   public modal:any = ModalPage;
   public navPage:any = NavTestPage;
   public abas: any = AbasPage;
+  public toast: any = ToastPage;
+  public toolbar: any = ToolbarPage;
 
 
   public rootPage:any = this.home;
