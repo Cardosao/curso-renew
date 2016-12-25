@@ -1,22 +1,38 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 
-/*
-  Generated class for the Inicio page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-inicio',
   templateUrl: 'inicio.html'
 })
 export class InicioPage {
 
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public loadingCtrl: LoadingController) {
+  }
 
   ionViewDidLoad() {
-    console.log('Hello InicioPage Page');
+    console.log('Carregando InicioPage Page');
+    this.presentLoading();
+
+  }
+
+  ionViewDidLeave() {
+    console.log('Deixando InicioPage Page');
+    this.presentLoading();
+
+  }
+  ionViewDidEnter() {
+    console.log('Entrando InicioPage Page');
+    this.presentLoading();
+
+  }
+
+  presentLoading() {
+    let loader = this.loadingCtrl.create({
+      content: "Please wait...",
+      duration: 3000
+    });
+    loader.present();
   }
 
 }

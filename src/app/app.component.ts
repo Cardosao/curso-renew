@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Platform } from 'ionic-angular';
+import { Platform, MenuController } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
@@ -22,24 +22,11 @@ import { ToolbarPage } from '../pages/toolbar/toolbar';
 
 export class MyApp {
 
-  public home:any = HomePage;
-  public teste:any = TestePage;
-  public alert:any = AlertPage;
-  public buttons:any = ButtonsPage;
-  public cards:any = CardsPage;
-  public inputs:any = InputsPage;
-  public lists:any = ListsPage;
-  public grid:any = GridPage;
-  public modal:any = ModalPage;
-  public navPage:any = NavTestPage;
-  public abas: any = AbasPage;
-  public toast: any = ToastPage;
-  public toolbar: any = ToolbarPage;
+  public pages: Array<any>;
+  public rootPage:any = HomePage;
 
-
-  public rootPage:any = this.home;
-
-  constructor(platform: Platform) {
+  constructor(platform: Platform, public menuCtrl: MenuController) {
+    this.initPages();
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
@@ -48,8 +35,27 @@ export class MyApp {
     });
   }
 
+  private initPages() {
+    this.pages = [
+      {title: 'Home', component: HomePage, icon: ''},
+      {title: 'Toolbar', component: ToolbarPage, icon: ''},
+      {title: 'Toasts', component: ToastPage, icon: ''},
+      {title: 'Abas', component: AbasPage, icon: ''},
+      {title: 'Navigation', component: NavTestPage, icon: ''},
+      {title: 'Modal', component: ModalPage, icon: ''},
+      {title: 'Grid', component: GridPage, icon: ''},
+      {title: 'Lists', component: ListsPage, icon: ''},
+      {title: 'Inputs', component: InputsPage, icon: ''},
+      {title: 'Teste', component: TestePage, icon: ''},
+      {title: 'Alert', component: AlertPage, icon: ''},
+      {title: 'Buttons', component: ButtonsPage, icon: ''},
+      {title: 'Cards', component: CardsPage, icon: ''}
+    ];
+  }
+
   public openPage(page) : any {
-    this.rootPage = page;
+    this.menuCtrl.close();
+    this.rootPage = page.component;
   }
 
 

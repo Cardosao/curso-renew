@@ -8,45 +8,7 @@
 
   <ion-content >
     <ion-list>
-      <button ion-item (click)="openPage(home)" menuClose>
-        Home
-      </button>
-      <button ion-item (click)="openPage(toolbar)" menuClose>
-        Toolbar
-      </button>
-      <button ion-item (click)="openPage(toast)" menuClose>
-        Toasts
-      </button>
-      <button ion-item (click)="openPage(abas)" menuClose>
-        Abas
-      </button>
-      <button ion-item (click)="openPage(navPage)" menuClose>
-        Navigation
-      </button>
-      <button ion-item (click)="openPage(modal)" menuClose>
-        Modal
-      </button>
-      <button ion-item (click)="openPage(grid)" menuClose>
-        Grid
-      </button>
-      <button ion-item (click)="openPage(lists)" menuClose>
-        Lists
-      </button>
-      <button ion-item (click)="openPage(inputs)" menuClose>
-        Inputs
-      </button>
-      <button ion-item (click)="openPage(teste)" menuClose>
-        Teste
-      </button>
-      <button ion-item (click)="openPage(alert)" menuClose>
-        Alert
-      </button>
-      <button ion-item (click)="openPage(buttons)" menuClose>
-        Buttons
-      </button>
-      <button ion-item (click)="openPage(cards)" menuClose>
-        Cards
-      </button>
+      <button ion-item *ngFor="let page of pages" (click)="openPage(page)">{{ page.title }}</button>
     </ion-list>
   </ion-content>
 

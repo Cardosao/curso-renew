@@ -30,20 +30,23 @@
       {{ item }}
     </ion-item>
   </ion-list>
+  <!-- setando o valor na variavel 'selecionado' vindo de 'value' -->
   <ion-segment [(ngModel)]="selecionado">
     <ion-segment-button value="starwars">Star Wars</ion-segment-button>
     <ion-segment-button value="startrek">Star Trek</ion-segment-button>
     <ion-segment-button value="warcraft">Warcraft</ion-segment-button>
   </ion-segment>
+  <!-- utiliza a variavel 'selecionado' -->
   <div [ngSwitch]="selecionado">
     <div>
+      <!-- aqui faz um switch na variavel 'selecionado' -->
       <ion-list *ngSwitchCase="selecionado">
+        <!-- recebe o array baseado na variavel -->
         <ion-item *ngFor="let item of getList(selecionado)">
           {{item}}
         </ion-item>
       </ion-list>
     </div>
-
   </div>
 </ion-content>
 

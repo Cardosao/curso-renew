@@ -15,6 +15,9 @@ export class ToolbarPage {
   st: string[];
   wc: string[];
 
+/**
+Devolve a lista dependendo da string recebida
+*/
   getList(select: string): string[] {
     let retorno: string[] = this.sw;
     switch (select) {
@@ -107,27 +110,21 @@ export class ToolbarPage {
   private filterChar(word: string): string {
     if (word.match(/[áàãâ]/g)) {
       word = word.replace(/[áàãâ]/g, 'a');
-      console.error('fc: ' + word);
     }
     if (word.match(/[éèê]/g)) {
       word = word.replace(/[éèê]/g, 'e');
-      console.error('fc: ' + word);
     }
     if (word.match(/[íìî]/g)) {
       word = word.replace(/[íìî]/g, 'i');
-      console.error('fc: ' + word);
     }
     if (word.match(/[óòöôõ]/g)) {
       word = word.replace(/[óòöôõ]/g, 'o');
-      console.error('fc: ' + word);
     }
     if (word.match(/[úùüû]/g)) {
       word = word.replace(/[úùüû]/g, 'u');
-      console.error('fc: ' + word);
     }
     if (word.match(/[ç]/g)) {
       word = word.replace(/[ç]/g, 'c');
-      console.error('fc: ' + word);
     }
     return word;
   }
