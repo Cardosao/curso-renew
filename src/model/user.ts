@@ -1,12 +1,15 @@
   import { Component } from '@angular/core';
 
-@Component({})
+@Component({
+  selector: 'page-user',
+  templateUrl: 'user.html',
+})
 export class User {
 
   constructor(){}
 
-  private email:string = "";
-  private password:string = "";
+  public email:string = "";
+  public pass:string = "";
 
   public setEmail(email:string) {
     return this.email = email;
@@ -16,11 +19,11 @@ export class User {
     return this.email;
   }
 
-  public setPassword(password:string) {
-    return this.password = password;
+  public setPass(pass:string) {
+    return this.pass = pass;
   }
 
-  public getPassword() {
-    return this.password;
+  public getPass() {
+    return this.pass;
   }
 }

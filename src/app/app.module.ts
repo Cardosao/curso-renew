@@ -2,31 +2,37 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { Storage } from '@ionic/storage';
 import { HttpModule, BaseRequestOptions } from '@angular/http';
-import { AUTH_PROVIDERS }      from 'angular2-jwt';
 
 import { MyApp } from './app.component';
 
-import { HomePage } from '../pages/home/home';
-import { TestePage } from '../pages/teste/teste';
+import { AbasPage } from '../pages/abas/abas';
 import { AlertPage } from '../pages/alert/alert';
 import { ButtonsPage } from '../pages/buttons/buttons';
+import { CameraTestPage } from '../pages/camera-test/camera-test';
 import { CardsPage } from '../pages/cards/cards';
-import { InputsPage } from '../pages/inputs/inputs';
-import { ListsPage } from '../pages/lists/lists';
+import { ContatosPage } from '../pages/contatos/contatos';
 import { ErrorPage } from '../pages/error/error';
 import { GridPage } from '../pages/grid/grid';
+import { HomePage } from '../pages/home/home';
+import { InicioPage } from '../pages/inicio/inicio';
+import { InputsPage } from '../pages/inputs/inputs';
+import { ListsPage } from '../pages/lists/lists';
 import { ModalPage } from '../pages/modal/modal';
 import { ModalLoginPage } from '../pages/modal-login/modal-login';
 import { NavTestPage } from '../pages/nav-test/nav-test';
-import { AbasPage } from '../pages/abas/abas';
-import { InicioPage } from '../pages/inicio/inicio';
-import { ContatosPage } from '../pages/contatos/contatos';
+import { TestePage } from '../pages/teste/teste';
 import { ToastPage } from '../pages/toast/toast';
 import { ToolbarPage } from '../pages/toolbar/toolbar';
+import { NetworkTestPage } from '../pages/network-test/network-test';
+
+import { User } from '../model/user';
 
 import { ApiService } from '../providers/api-service';
 import { Login } from '../providers/login';
 import { HttpInterceptor } from '../providers/http-interceptor';
+
+import { Camera } from 'ionic-native';
+import { Network, Diagnostic} from 'ionic-native';
 
 /**
 * Se for utilizar algo especifico em uma pagina importa lá
@@ -59,6 +65,9 @@ import { Uppercase } from '../pipes/uppercase';
     ContatosPage,
     ToastPage,
     ToolbarPage,
+    CameraTestPage,
+    User,
+    NetworkTestPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -84,15 +93,20 @@ import { Uppercase } from '../pipes/uppercase';
     ContatosPage,
     ToastPage,
     ToolbarPage,
+    CameraTestPage,
+    User,
+    NetworkTestPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Storage,
     BaseRequestOptions,
-    AUTH_PROVIDERS,
     HttpInterceptor,
     ApiService,
     Login,
+    Camera,
+    Network,
+    Diagnostic
   ]
 })
 export class AppModule {}

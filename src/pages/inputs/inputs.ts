@@ -9,8 +9,8 @@ import { ModalLoginPage } from '../modal-login/modal-login';
 })
 export class InputsPage {
 
-  private nome:string = "";
-  private senha:string = "";
+  public nome:string = "";
+  public senha:string = "";
 
   constructor(public navCtrl: NavController, public alert: AlertController, public modal: ModalLoginPage) {}
 

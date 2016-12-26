@@ -15,6 +15,8 @@ import { NavTestPage } from '../pages/nav-test/nav-test';
 import { AbasPage } from '../pages/abas/abas';
 import { ToastPage } from '../pages/toast/toast'
 import { ToolbarPage } from '../pages/toolbar/toolbar';
+import { CameraTestPage } from '../pages/camera-test/camera-test';
+import { NetworkTestPage } from '../pages/network-test/network-test';
 
 @Component({
   templateUrl: 'app.html',
@@ -37,19 +39,21 @@ export class MyApp {
 
   private initPages() {
     this.pages = [
-      {title: 'Home', component: HomePage, icon: ''},
-      {title: 'Toolbar', component: ToolbarPage, icon: ''},
-      {title: 'Toasts', component: ToastPage, icon: ''},
       {title: 'Abas', component: AbasPage, icon: ''},
-      {title: 'Navigation', component: NavTestPage, icon: ''},
-      {title: 'Modal', component: ModalPage, icon: ''},
-      {title: 'Grid', component: GridPage, icon: ''},
-      {title: 'Lists', component: ListsPage, icon: ''},
-      {title: 'Inputs', component: InputsPage, icon: ''},
-      {title: 'Teste', component: TestePage, icon: ''},
       {title: 'Alert', component: AlertPage, icon: ''},
       {title: 'Buttons', component: ButtonsPage, icon: ''},
-      {title: 'Cards', component: CardsPage, icon: ''}
+      {title: 'Camera', component: CameraTestPage, icon: ''},
+      {title: 'Cards', component: CardsPage, icon: ''},
+      {title: 'Grid', component: GridPage, icon: ''},
+      {title: 'Home', component: HomePage, icon: ''},
+      {title: 'Inputs', component: InputsPage, icon: ''},
+      {title: 'Lists', component: ListsPage, icon: ''},
+      {title: 'Modal', component: ModalPage, icon: ''},
+      {title: 'Navigation', component: NavTestPage, icon: ''},
+      {title: 'Network', component: NetworkTestPage, icon: ''},
+      {title: 'Teste', component: TestePage, icon: ''},
+      {title: 'Toasts', component: ToastPage, icon: ''},
+      {title: 'Toolbar', component: ToolbarPage, icon: ''},
     ];
   }
 

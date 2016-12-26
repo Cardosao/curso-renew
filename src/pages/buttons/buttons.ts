@@ -22,7 +22,7 @@ export class ButtonsPage {
   login() {
     let user = new User();
     user.setEmail("fabiano@cardosao.com");
-    user.setPassword("123");
+    user.setPass("123");
     this.modal.loginExterno(user);
   }
 
