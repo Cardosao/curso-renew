@@ -1,0 +1,17 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>NOTIFICATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click)="send()">Enviar</button>
+  <h2>{{ stt }}</h2>
+  <h2>{{ not | json }}</h2>
+</ion-content>

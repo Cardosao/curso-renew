@@ -33,18 +33,26 @@
     "typescript": "2.0.9"
   },
   "cordovaPlugins": [
-    "cordova-plugin-device",
-    "cordova-plugin-camera",
-    "cordova-plugin-compat",
-    "cordova-plugin-console",
     "cordova-plugin-whitelist",
+    "cordova-plugin-console",
     "cordova-plugin-statusbar",
+    "cordova-plugin-device",
     "cordova-plugin-splashscreen",
     "ionic-plugin-keyboard",
-    "cordova-plugin-network-information"
+    "cordova-plugin-camera",
+    "cordova-plugin-compat",
+    "cordova-plugin-network-information",
+    "cordova.plugins.diagnostic",
+    "de.appplant.cordova.plugin.local-notification",
+    "cordova-plugin-app-event"
   ],
   "cordovaPlatforms": [
-    "android@5.1.0"
+    "android@5.1.0",
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    }
   ],
   "description": "teste-build: An Ionic project"
 }

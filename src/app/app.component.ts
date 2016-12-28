@@ -17,6 +17,8 @@ import { ToastPage } from '../pages/toast/toast'
 import { ToolbarPage } from '../pages/toolbar/toolbar';
 import { CameraTestPage } from '../pages/camera-test/camera-test';
 import { NetworkTestPage } from '../pages/network-test/network-test';
+import { NotificationPage } from '../pages/notification/notification';
+import { BarScanPage } from '../pages/bar-scan/bar-scan';
 
 @Component({
   templateUrl: 'app.html',
@@ -39,6 +41,8 @@ export class MyApp {
 
   private initPages() {
     this.pages = [
+      {title: 'BarScanner', component: BarScanPage,  icon: ''},
+      {title: 'Notification', component: NotificationPage,  icon: ''},
       {title: 'Abas', component: AbasPage, icon: ''},
       {title: 'Alert', component: AlertPage, icon: ''},
       {title: 'Buttons', component: ButtonsPage, icon: ''},

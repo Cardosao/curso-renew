@@ -24,6 +24,8 @@ import { TestePage } from '../pages/teste/teste';
 import { ToastPage } from '../pages/toast/toast';
 import { ToolbarPage } from '../pages/toolbar/toolbar';
 import { NetworkTestPage } from '../pages/network-test/network-test';
+import { NotificationPage } from '../pages/notification/notification';
+import { BarScanPage } from '../pages/bar-scan/bar-scan';
 
 import { User } from '../model/user';
 
@@ -68,6 +70,8 @@ import { Uppercase } from '../pipes/uppercase';
     CameraTestPage,
     User,
     NetworkTestPage,
+    NotificationPage,
+    BarScanPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -96,6 +100,8 @@ import { Uppercase } from '../pipes/uppercase';
     CameraTestPage,
     User,
     NetworkTestPage,
+    NotificationPage,
+    BarScanPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

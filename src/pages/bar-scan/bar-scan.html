@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>BAR-SCANNER</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>BarScanner: {{ code | json }}</h2>
+  <h2>Status: {{ status }}</h2>
+  <h2>Obs: {{ obs | json }}</h2>
+
+  <button ion-button (click)="scan()" block>SCAN</button>
+
+</ion-content>
