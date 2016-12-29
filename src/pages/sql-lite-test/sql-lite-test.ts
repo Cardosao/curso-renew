@@ -79,16 +79,6 @@ export class SqlLiteTestPage {
       tx.executeSql('DROP TABLE IF EXISTS Pessoa');
       this.status = 'DROP EFETUADO!';
     });
-    // this.database.then(() => {
-    //   this.db. executeSql('DELETE FROM Pessoa WHERE id = 1', {})
-    //   .then(() => {
-    //     console.log("Drop na tabela");
-    //   }, (err) => {
-    //     console.error('Unable to execute sql: ', err);
-    //   });
-    // }, (err) => {
-    //   console.error('Unable to open database: ', err);
-    // });
   }
 
   delete(): void {
@@ -96,13 +86,6 @@ export class SqlLiteTestPage {
       tx.executeSql('DELETE FROM Pessoa WHERE id = 1');
       this.status = 'DELETE DO ID EFETUADO!';
     });
-    // this.database.executeSql('DELETE FROM Pessoa WHERE id = 1', {})
-    //   .then((data) => {
-    //     console.log("Deleted", JSON.stringify(data));
-    //     this.select();
-    //   }, (error) => {
-    //     console.log("ERROR: " + JSON.stringify(error.err));
-    //   });
   }
 
   create(): void {
