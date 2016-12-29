@@ -5,6 +5,13 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>GRID</ion-title>
+
+    <ion-buttons right>
+      <button menuToggle="right" ion-button icon-only>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
@@ -23,6 +30,9 @@
         <div>COL3</div>
       </ion-col>
     </ion-row>
+
   </ion-grid>
+
+  <button ion-button type="button" name="button" block (click)="pushPage()">Abrir Página</button>
 
 </ion-content>

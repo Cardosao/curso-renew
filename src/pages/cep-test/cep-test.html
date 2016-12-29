@@ -1,0 +1,44 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle ion-button icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>CEP</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item padding>
+      <ion-label floating>CEP:</ion-label>
+      <ion-input type="text" name="cepTxt" [(ngModel)]="cep"></ion-input>
+    </ion-item>
+    <div padding="10">
+      <button ion-button block outline (click)="buscar(cep)">Buscar CEP</button>
+    </div>
+    <div padding="10">
+      <button ion-button block outline (click)="clear()" color="danger">Limpar lista</button>
+    </div>
+
+    <ion-list *ngFor="let c of listaCep">
+      <ion-item-divider color="light">CEP: {{ c.cep }}</ion-item-divider>
+      <ion-item>
+        Endereço: {{ c.logradouro }}
+      </ion-item>
+      <ion-item>
+        Bairro: {{ c.bairro }}
+      </ion-item>
+      <ion-item>
+        Cidade: {{ c.localidade }}
+      </ion-item>
+      <ion-item>
+        UF: {{ c.uf }}
+      </ion-item>
+    </ion-list>
+
+  </ion-list>
+
+</ion-content>

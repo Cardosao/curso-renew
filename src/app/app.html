@@ -1,4 +1,4 @@
-<ion-menu [content]="content">
+<ion-menu [content]="content" side="left" type="overlay" persistent="true" id="menu1">
 
   <ion-header>
     <ion-toolbar>
@@ -8,11 +8,32 @@
 
   <ion-content >
     <ion-list>
-      <button ion-item *ngFor="let page of pages" (click)="openPage(page)">{{ page.title }}</button>
+      <button ion-item *ngFor="let page of pages" (click)="openPage(page, left)">
+        <ion-icon name="{{page.icon}}"></ion-icon>
+        {{ page.title }}
+      </button>
     </ion-list>
   </ion-content>
 
 </ion-menu>
 
+<ion-menu [content]="content" side="right" type="push" persistent="true" id="menu2">
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content >
+    <ion-list>
+      <button ion-item *ngFor="let page of pages" (click)="openPage(page, right)">
+        <ion-icon name="{{page.icon}}"></ion-icon>
+        {{ page.title }}
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
 
 <ion-nav id="main-nav" [root]="rootPage" #content swipeBackEnabled="true"></ion-nav>

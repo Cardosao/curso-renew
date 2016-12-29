@@ -19,6 +19,9 @@ import { CameraTestPage } from '../pages/camera-test/camera-test';
 import { NetworkTestPage } from '../pages/network-test/network-test';
 import { NotificationPage } from '../pages/notification/notification';
 import { BarScanPage } from '../pages/bar-scan/bar-scan';
+import { CepTestPage } from '../pages/cep-test/cep-test';
+import { GeoTestPage } from '../pages/geo-test/geo-test';
+import { SqlLiteTestPage } from '../pages/sql-lite-test/sql-lite-test';
 
 @Component({
   templateUrl: 'app.html',
@@ -41,29 +44,32 @@ export class MyApp {
 
   private initPages() {
     this.pages = [
-      {title: 'BarScanner', component: BarScanPage,  icon: ''},
-      {title: 'Notification', component: NotificationPage,  icon: ''},
-      {title: 'Abas', component: AbasPage, icon: ''},
-      {title: 'Alert', component: AlertPage, icon: ''},
-      {title: 'Buttons', component: ButtonsPage, icon: ''},
-      {title: 'Camera', component: CameraTestPage, icon: ''},
-      {title: 'Cards', component: CardsPage, icon: ''},
-      {title: 'Grid', component: GridPage, icon: ''},
-      {title: 'Home', component: HomePage, icon: ''},
-      {title: 'Inputs', component: InputsPage, icon: ''},
-      {title: 'Lists', component: ListsPage, icon: ''},
-      {title: 'Modal', component: ModalPage, icon: ''},
-      {title: 'Navigation', component: NavTestPage, icon: ''},
-      {title: 'Network', component: NetworkTestPage, icon: ''},
-      {title: 'Teste', component: TestePage, icon: ''},
-      {title: 'Toasts', component: ToastPage, icon: ''},
-      {title: 'Toolbar', component: ToolbarPage, icon: ''},
+      {title: 'Cep', component: CepTestPage,  icon: 'mail'},
+      {title: 'GeoLocalization', component: GeoTestPage,  icon: 'globe'},
+      {title: 'SQLite', component: SqlLiteTestPage,  icon: 'cube'},
+      {title: 'BarScanner', component: BarScanPage,  icon: 'barcode'},
+      {title: 'Notification', component: NotificationPage,  icon: 'notifications'},
+      {title: 'Abas', component: AbasPage, icon: 'swap'},
+      {title: 'Alert', component: AlertPage, icon: 'notifications'},
+      {title: 'Buttons', component: ButtonsPage, icon: 'calculator'},
+      {title: 'Camera', component: CameraTestPage, icon: 'camera'},
+      {title: 'Cards', component: CardsPage, icon: 'calendar'},
+      {title: 'Grid', component: GridPage, icon: 'apps'},
+      {title: 'Home', component: HomePage, icon: 'home'},
+      {title: 'Inputs', component: InputsPage, icon: 'checkbox'},
+      {title: 'Lists', component: ListsPage, icon: 'menu'},
+      {title: 'Modal', component: ModalPage, icon: 'albuns'},
+      {title: 'Navigation', component: NavTestPage, icon: 'albuns'},
+      {title: 'Network', component: NetworkTestPage, icon: 'git-network'},
+      {title: 'Teste', component: TestePage, icon: 'eye'},
+      {title: 'Toasts', component: ToastPage, icon: 'at'},
+      {title: 'Toolbar', component: ToolbarPage, icon: 'game-controller-a'},
     ];
   }
 
-  public openPage(page) : any {
-    this.menuCtrl.close();
+  public openPage(page, side) : any {
     this.rootPage = page.component;
+    this.menuCtrl.close(side);
   }
 
 

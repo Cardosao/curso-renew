@@ -26,12 +26,16 @@ import { ToolbarPage } from '../pages/toolbar/toolbar';
 import { NetworkTestPage } from '../pages/network-test/network-test';
 import { NotificationPage } from '../pages/notification/notification';
 import { BarScanPage } from '../pages/bar-scan/bar-scan';
+import { CepTestPage } from '../pages/cep-test/cep-test';
+import { GeoTestPage } from '../pages/geo-test/geo-test';
+import { SqlLiteTestPage } from '../pages/sql-lite-test/sql-lite-test';
 
 import { User } from '../model/user';
 
 import { ApiService } from '../providers/api-service';
 import { Login } from '../providers/login';
 import { HttpInterceptor } from '../providers/http-interceptor';
+import { CepService } from '../providers/cep-service';
 
 import { Camera } from 'ionic-native';
 import { Network, Diagnostic} from 'ionic-native';
@@ -72,6 +76,9 @@ import { Uppercase } from '../pipes/uppercase';
     NetworkTestPage,
     NotificationPage,
     BarScanPage,
+    CepTestPage,
+    GeoTestPage,
+    SqlLiteTestPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -102,6 +109,9 @@ import { Uppercase } from '../pipes/uppercase';
     NetworkTestPage,
     NotificationPage,
     BarScanPage,
+    CepTestPage,
+    GeoTestPage,
+    SqlLiteTestPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},
@@ -112,7 +122,8 @@ import { Uppercase } from '../pipes/uppercase';
     Login,
     Camera,
     Network,
-    Diagnostic
+    Diagnostic,
+    CepService,
   ]
 })
 export class AppModule {}

@@ -44,15 +44,12 @@
     "cordova-plugin-network-information",
     "cordova.plugins.diagnostic",
     "de.appplant.cordova.plugin.local-notification",
-    "cordova-plugin-app-event"
+    "cordova-plugin-app-event",
+    "cordova-plugin-geolocation",
+    "cordova-sqlite-storage"
   ],
   "cordovaPlatforms": [
-    "android@5.1.0",
-    {
-      "platform": "android",
-      "version": "",
-      "locator": "android"
-    }
+    "android@5.1.0"
   ],
-  "description": "teste-build: An Ionic project"
+  "description": "Renew: An Ionic project"
 }

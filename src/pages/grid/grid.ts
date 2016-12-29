@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { CardsPage } from '../cards/cards';
 
-/*
-  Generated class for the Grid page.
-
-  See http://ionicframework.com/docs/v2/components/#navigation for more info on
-  Ionic pages and navigation.
-*/
 @Component({
   selector: 'page-grid',
   templateUrl: 'grid.html'
@@ -17,6 +12,10 @@ export class GridPage {
 
   ionViewDidLoad() {
     console.log('Hello GridPage Page');
+  }
+
+  pushPage () : void {
+    this.navCtrl.push(CardsPage);
   }
 
 }

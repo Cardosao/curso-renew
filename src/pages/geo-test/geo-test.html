@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle ion-button icon-only>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>GEOLOCATION</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-item padding>{{ lat }}</ion-item>
+    <ion-item padding>{{ log }}</ion-item>
+    <div padding>
+      <button ion-button block secondary (click)="getLoc()">Buscar Location</button>
+    </div>
+  </ion-list>
+
+  <ion-list>
+    <ion-item padding>{{ watch }}</ion-item>
+  </ion-list>
+
+</ion-content>
