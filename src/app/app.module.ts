@@ -29,6 +29,7 @@ import { BarScanPage } from '../pages/bar-scan/bar-scan';
 import { CepTestPage } from '../pages/cep-test/cep-test';
 import { GeoTestPage } from '../pages/geo-test/geo-test';
 import { SqlLiteTestPage } from '../pages/sql-lite-test/sql-lite-test';
+import { ContactsTestPage } from '../pages/contacts-test/contacts-test';
 
 import { User } from '../model/user';
 
@@ -79,6 +80,7 @@ import { Uppercase } from '../pipes/uppercase';
     CepTestPage,
     GeoTestPage,
     SqlLiteTestPage,
+    ContactsTestPage,
   ],
   imports: [
     IonicModule.forRoot(MyApp),
@@ -112,6 +114,7 @@ import { Uppercase } from '../pipes/uppercase';
     CepTestPage,
     GeoTestPage,
     SqlLiteTestPage,
+    ContactsTestPage,
   ],
   providers: [
     {provide: ErrorHandler, useClass: IonicErrorHandler},

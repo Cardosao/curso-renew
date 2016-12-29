@@ -1,0 +1,47 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>CONTATOS</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <ion-item class="fill-border-bottom">
+    <ion-label floating>Nome do contato</ion-label>
+    <ion-input clearInput type="text" [(ngModel)]="contactToBeFound"></ion-input>
+  </ion-item>
+  <ion-buttons padding>
+    <button block ion-button (click)="find(contactToBeFound)">Buscar</button>
+  </ion-buttons>
+
+  <ion-item>
+    <ion-label>
+      Definir Todos
+    </ion-label>
+    <ion-icon name='body' item-right></ion-icon>
+    <ion-icon name='briefcase' item-right></ion-icon>
+    <ion-toggle style="width: 50px;" [(ngModel)]="all" (ionChange)="selectAll($event)"></ion-toggle>
+  </ion-item>
+
+  <ion-list [hidden]="!search" *ngFor="let contact of contactsFound">
+
+    <ion-item-divider color="light">{{contact.displayName}}</ion-item-divider>
+    <ion-item >
+      <ion-row *ngFor="let number of contact.phoneNumbers">
+        <ion-col>{{ number.value }}</ion-col>
+      </ion-row>
+    </ion-item>
+    <ion-item>
+      <ion-toggle checked="{{contact.checked || all}}" [(ngModel)]="contact.checked"></ion-toggle>
+      <ion-label>
+        Particular ou Profissional
+      </ion-label>
+      <ion-icon name='body' item-left></ion-icon>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

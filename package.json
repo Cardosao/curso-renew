@@ -45,11 +45,18 @@
     "cordova.plugins.diagnostic",
     "de.appplant.cordova.plugin.local-notification",
     "cordova-plugin-app-event",
+    "phonegap-plugin-barcodescanner",
     "cordova-plugin-geolocation",
-    "cordova-sqlite-storage"
+    "cordova-sqlite-storage",
+    "cordova-plugin-contacts"
   ],
   "cordovaPlatforms": [
-    "android@5.1.0"
+    "android@5.1.0",
+    {
+      "platform": "android",
+      "version": "",
+      "locator": "android"
+    }
   ],
   "description": "Renew: An Ionic project"
 }

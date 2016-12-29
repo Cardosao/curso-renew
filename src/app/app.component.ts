@@ -22,6 +22,7 @@ import { BarScanPage } from '../pages/bar-scan/bar-scan';
 import { CepTestPage } from '../pages/cep-test/cep-test';
 import { GeoTestPage } from '../pages/geo-test/geo-test';
 import { SqlLiteTestPage } from '../pages/sql-lite-test/sql-lite-test';
+import { ContactsTestPage } from '../pages/contacts-test/contacts-test';
 
 @Component({
   templateUrl: 'app.html',
@@ -45,6 +46,7 @@ export class MyApp {
   private initPages() {
     this.pages = [
       {title: 'Cep', component: CepTestPage,  icon: 'mail'},
+      {title: 'Contatos', component: ContactsTestPage,  icon: 'contact'},
       {title: 'GeoLocalization', component: GeoTestPage,  icon: 'globe'},
       {title: 'SQLite', component: SqlLiteTestPage,  icon: 'cube'},
       {title: 'BarScanner', component: BarScanPage,  icon: 'barcode'},
